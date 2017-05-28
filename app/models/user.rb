@@ -11,7 +11,7 @@ class User < ApplicationRecord
 		:email,
 		presence: true,
 		length: {maximum: 250},
-		format: { with: VALID_EMAIL_REGEX },
+		format: { with: VALID_EMAIL_REGEX }, 
 		#uniqueness: true   #唯一，并且区分大小写
 		uniqueness: { case_sensitive: false }  #唯一，并且不区分大小写
 		)
