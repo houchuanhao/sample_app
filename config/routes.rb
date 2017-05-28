@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'users/new'
+
   	get 'foo/bar'
 
   	get 'foo/baz'
