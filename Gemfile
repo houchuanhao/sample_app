@@ -8,6 +8,7 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
+gem 'bcrypt', '3.1.11' #哈希算法计算密码摘要
 # 安装bootstrap
 gem 'bootstrap-sass', '3.3.6'
 

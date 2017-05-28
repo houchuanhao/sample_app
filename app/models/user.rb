@@ -2,7 +2,8 @@ class User < ApplicationRecord
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
 	                   #/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
 
-	before_save {self.email=email.downcase}
+	#before_save {self.email=email.downcase}
+	before_save { email.downcase! }
 	validates(:name, 
 		presence: true,
 		length: {maximum:50}
@@ -15,4 +16,5 @@ class User < ApplicationRecord
 		#uniqueness: true   #唯一，并且区分大小写
 		uniqueness: { case_sensitive: false }  #唯一，并且不区分大小写
 		)
+	has_secure_password
 end
