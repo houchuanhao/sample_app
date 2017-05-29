@@ -17,4 +17,5 @@ class User < ApplicationRecord
 		uniqueness: { case_sensitive: false }  #唯一，并且不区分大小写
 		)
 	has_secure_password
+	validates :password, presence: true, length: { minimum: 6 }
 end
