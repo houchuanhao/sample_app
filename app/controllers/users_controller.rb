@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  def index
+@users = User.all
+end
   def new
   	@user=User.new
   end
@@ -38,5 +41,11 @@ private
       flash[:danger] = "Please log in."
       redirect_to login_url
     end
+  end
+
+  # 确保是正确的用户
+  def correct_user
+  @user = User.find(params[:id])
+  redirect_to(root_url) unless current_user?(@user)
   end
 end
