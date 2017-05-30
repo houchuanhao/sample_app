@@ -18,4 +18,9 @@ class User < ApplicationRecord
 		)
 	has_secure_password
 	validates :password, presence: true, length: { minimum: 4 }
+
+# 实现动态流原型
+	def feed
+		Micropost.where("user_id = ?", id)
+	end
 end
