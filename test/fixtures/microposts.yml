@@ -2,10 +2,10 @@
 
 one:
   content: MyText
+  state: 1
   user: one
-  type: 1
 
 two:
   content: MyText
+  state: 1
   user: two
-  type: 1
