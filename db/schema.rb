@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170530055454) do
+ActiveRecord::Schema.define(version: 20170531011920) do
+
+  create_table "commits", force: :cascade do |t|
+    t.string "content"
+    t.integer "micropost_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["micropost_id"], name: "index_commits_on_micropost_id"
+  end
 
   create_table "microposts", force: :cascade do |t|
     t.text "content"
