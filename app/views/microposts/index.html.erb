@@ -1,0 +1,9 @@
+<% provide(:title, '问答') %>
+<h1>问答</h1>
+<%= will_paginate %>
+<ul class="users">
+<% @microposts.each do |micropost| %>
+<%= render micropost %>
+<% end %>
+</ul>
+<%= will_paginate %>

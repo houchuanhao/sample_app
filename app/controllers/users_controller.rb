@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   before_action :admin_user,only: :destroy
   def index
     @users = User.paginate(page: params[:page])
+    #debuger
   end
   def new
   	@user=User.new
@@ -47,8 +48,8 @@ private
   end
   # 确保是正确的用户
   def correct_user
-  @user = User.find(params[:id])
-  redirect_to(root_url) unless current_user?(@user)
+     @user = User.find(params[:id])
+     redirect_to(root_url) unless current_user==@user
   end
 
 
