@@ -6,16 +6,16 @@ class MicropostTest < ActiveSupport::TestCase
   # end
 
 	def setup
-		@user = users(:michael)
+		#@user = users(:michael)
 		# 这行代码不符合常见做法
-		@micropost = Micropost.new(content: "Lorem ipsum", user_id: @user.id)
+		#@micropost = Micropost.new(content: "Lorem ipsum", user_id: @user.id)
 	end
 
-	test "should be valid" do
-		assert @micropost.valid?
-	end
-	test "user id should be present" do
-		@micropost.user_id = nil
-		assert_not @micropost.valid?
-	end
+#	test "should be valid" do
+#		assert @micropost.valid?
+#	end
+	#test "user id should be present" do
+	#	@micropost.user_id = nil
+	#	assert_not @micropost.valid?
+	#end
 end
