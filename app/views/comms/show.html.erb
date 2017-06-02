@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @comm.content %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @comm.user %>
+</p>
+
+<p>
+  <strong>Micropost:</strong>
+  <%= @comm.micropost %>
+</p>
+
+<%= link_to 'Edit', edit_comm_path(@comm) %> |
+<%= link_to 'Back', comms_path %>
